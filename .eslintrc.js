@@ -27,7 +27,7 @@ module.exports = {
   },
   rules: {
     'linebreak-style': 'off',
-    'import/no-unassigned-import': ['error', { allow: ['**/*.css'] }],
+    'import/no-unassigned-import': ['error', { allow: ['**/*.css', '**/*.scss'] }],
     '@typescript-eslint/no-shadow': ['off'],
     '@typescript-eslint/no-unused-vars': ['error'],
     'import/order': [
