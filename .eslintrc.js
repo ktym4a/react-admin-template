@@ -6,7 +6,7 @@ module.exports = {
     'plugin:jsx-a11y/recommended',
     'prettier'
   ],
-  plugins: ['react', '@typescript-eslint', 'import'],
+  plugins: ['react', '@typescript-eslint', 'import', 'jest-dom', 'testing-library'],
   env: {
     browser: true,
     es6: true,
@@ -25,6 +25,12 @@ module.exports = {
     sourceType: 'module',
     project: './tsconfig.json'
   },
+  overrides: [
+    {
+      files: ['**/__tests__/**/*.+(ts|tsx|js)', '**/?(*.)+(spec|test).+(ts|tsx|js)'],
+      extends: ['plugin:jest-dom/recommended', 'plugin:testing-library/react']
+    }
+  ],
   rules: {
     'linebreak-style': 'off',
     'import/no-unassigned-import': ['error', { allow: ['**/*.css', '**/*.scss'] }],
