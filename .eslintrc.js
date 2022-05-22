@@ -21,7 +21,7 @@ module.exports = {
     ecmaFeatures: {
       jsx: true
     },
-    ecmaVersion: 'latest',
+    ecmaVersion: '12',
     sourceType: 'module',
     project: './tsconfig.json'
   },
@@ -60,5 +60,10 @@ module.exports = {
       }
     ],
     '@typescript-eslint/consistent-type-imports': ['error', { prefer: 'type-imports' }]
+  },
+  settings: {
+    'import/resolver': {
+      typescript: {}
+    }
   }
 }
